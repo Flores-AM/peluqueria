@@ -33,6 +33,8 @@
     <!-- Contenedor principal de pasos -->
     <main class="contenedor contenedor-pasos">
         <section class="paso paso-1 activo">
+
+
             <h2 class="titulo">Servicios</h2>
             <p class="subtitulo">Selecciona uno o más servicios</p>
             <p class="error-mensaje" id="error-servicio">¡Selecciona al menos un servicio!</p>
@@ -67,7 +69,7 @@
             <p class="error-mensaje" id="error-fecha">¡Selecciona una fecha!</p>
 
             <div class="cargando-fechas">
-                <p>Cargando fechas disponibles...</p>
+                <span class="loader"></span>
             </div>
 
             <div class="contenedor-fechas">
@@ -93,7 +95,7 @@
             <p class="error-mensaje" id="error-horario">¡Selecciona un horario!</p>
             
             <div class="cargando-horarios" style="display: none;">
-                <p class="cargando-horarios">Cargando horarios disponibles...</p>
+                <span class="loader"></span>
             </div>
             
             <div class="contenedor-horarios">
@@ -196,6 +198,7 @@
                 <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="ffffff"/>
             </svg>
         </button>
+        <span class="loader" id="reserva-loader" style="display: none;"></span>
     </div>
 
     <script src="js/bundle.min.js"></script>
