@@ -26,179 +26,181 @@
         </button>
     </nav>
 
-    <div class="barra-progreso">
-        <div class="progreso" id="progreso"></div>
-    </div>
-
-    <!-- Contenedor principal de pasos -->
-    <main class="contenedor contenedor-pasos">
-        <section class="paso paso-1 activo">
-
-
-            <h2 class="titulo">Servicios</h2>
-            <p class="subtitulo">Selecciona uno o más servicios</p>
-            <p class="error-mensaje" id="error-servicio">¡Selecciona al menos un servicio!</p>
-
-            <div class="contenedor-servicios">
-                <div class="flotante servicio" data-servicio="Corte">
-                    <p class="p1">Corte</p>
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
+    <div class="contenedor-maqueta">
+        <div class="barra-progreso">
+            <div class="progreso" id="progreso"></div>
+        </div>
+    
+        <!-- Contenedor principal de pasos -->
+        <main class="contenedor contenedor-pasos">
+            <section class="paso paso-1 activo">
+    
+    
+                <h2 class="titulo">Servicios</h2>
+                <p class="subtitulo">Selecciona uno o más servicios</p>
+                <p class="error-mensaje" id="error-servicio">¡Selecciona al menos un servicio!</p>
+    
+                <div class="contenedor-servicios">
+                    <div class="flotante servicio" data-servicio="Corte">
+                        <p class="p1">Corte</p>
+                        <svg class="check-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                    <div class="flotante servicio" data-servicio="Teñido">
+                        <p class="p1">Teñido</p>
+                        <svg class="check-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                    <div class="flotante servicio" data-servicio="Alisado">
+                        <p class="p1">Alisado</p>
+                        <svg class="check-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="flotante servicio" data-servicio="Teñido">
-                    <p class="p1">Teñido</p>
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                </div>
-                <div class="flotante servicio" data-servicio="Alisado">
-                    <p class="p1">Alisado</p>
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <p class="info-seleccion subtitulo">Seleccionados: <span id="contador-servicios">0</span></p>
-        </section>
-        
-        <section class="paso paso-2">
-            <h2 class="titulo">Fechas</h2>
-            <p class="subtitulo">Disponibilidad de la semana</p>
-            <p class="error-mensaje" id="error-fecha">¡Selecciona una fecha!</p>
-
-            <div class="cargando-fechas">
-                <span class="loader"></span>
-            </div>
-
-            <div class="contenedor-fechas">
-                <!-- Plantilla para fecha (oculta inicialmente) -->
-                <div class="flotante fecha" style="display: none;">
-                    <p class="p1"></p> <!-- Día y fecha -->
-                    <p class="p2"></p> <!-- Disponibilidad -->
-
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <p class="sin-fechas" style="display: none;">
-                No hay fechas disponibles en este momento
-            </p>
-        </section>
-
-        <section class="paso paso-3">
-            <h2 class="titulo">Horarios</h2>
-            <p class="subtitulo">¿A qué hora nos vemos?</p>
-            <p class="error-mensaje" id="error-horario">¡Selecciona un horario!</p>
+    
+                <p class="info-seleccion subtitulo">Seleccionados: <span id="contador-servicios">0</span></p>
+            </section>
             
-            <div class="cargando-horarios" style="display: none;">
-                <span class="loader"></span>
-            </div>
-            
-            <div class="contenedor-horarios">
-                <!-- Plantilla para horario (oculta inicialmente) -->
-                <div class="flotante horario" style="display: none;">
-                    <p class="p1"></p> <!-- Hora -->
-                    <p class="p2"></p> <!-- Estado (Ocupado/Disponible) -->
-
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
+            <section class="paso paso-2">
+                <h2 class="titulo">Fechas</h2>
+                <p class="subtitulo">Disponibilidad de la semana</p>
+                <p class="error-mensaje" id="error-fecha">¡Selecciona una fecha!</p>
+    
+                <div class="cargando-fechas">
+                    <span class="loader"></span>
                 </div>
-            </div>
-            
-            <p class="sin-horarios" style="display: none;">
-                No hay horarios disponibles para esta fecha
-            </p>
-        </section>
-
-        <!-- Paso 4: Datos del Cliente -->
-        <section class="paso paso-4">
-            <h2 class="titulo">Tus datos</h2>
-            <p class="subtitulo">Completa para finalizar</p>
-
-            <p class="error-mensaje" id="error-nombre">¡El nombre debe tener al menos 5 caracteres!</p>
-            <p class="error-mensaje" id="error-email">¡Ingresa un email valido!</p>
-            <p class="error-mensaje" id="error-telefono">¡El teléfono debe tener 10 números!</p>
-            
-            <form id="form-cliente" class="form-datos">
-                <div class="grupo-form">
-                  <input class="input-floating" type="text" id="nombre" minlength="5" placeholder=" " required>
-                  <label for="nombre">Nombre completo</label>
-                  <small class="small-mensaje">Mínimo 5 letras</small>
+    
+                <div class="contenedor-fechas">
+                    <!-- Plantilla para fecha (oculta inicialmente) -->
+                    <div class="flotante fecha" style="display: none;">
+                        <p class="p1"></p> <!-- Día y fecha -->
+                        <p class="p2"></p> <!-- Disponibilidad -->
+    
+                        <svg class="check-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
                 </div>
-
-                <div class="grupo-form">
-                    <input class="input-floating" type="email" id="email" placeholder=" " required>
-                    <label for="email">Email</label>
-                    <small class="small-mensaje">Ejemplo: usuario@dominio.com</small>
-                </div>
-
-                <!-- Teléfono (exactamente 10 números) -->
-                <div class="grupo-form">
-                    <input class="input-floating" type="tel" id="telefono" pattern="[0-9]{10}" placeholder=" " oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
-                    <label for="telefono">Teléfono</label>
-                    <small class="small-mensaje">10 números sin espacios</small>
-                </div>
-                
-                <!-- Observaciones (Opcional) -->
-                <div class="grupo-form">
-                    <textarea 
-                        class="input-floating" id="observacion" rows="3" placeholder=" "></textarea>
-                    <label for="observacion">Observaciones (opcional)</label>
-                </div>
-            </form>
-        </section>
-
-        <!-- Paso 5: Resumen (antes paso 4) -->
-        <section class="paso paso-5">
-            <h2 class="titulo">Resumen</h2>
-            <div class="resumen flotante">
-                <p>Cliente: <span id="cliente-nombre">[Nombre ingresado]</span></p>
-                <p id="mail-cliente">Email: <span id="cliente-email">[Email ingresado]</span></p>
-                <p>Teléfono: <span id="cliente-telefono">[Teléfono ingresado]</span></p>
-                <p>Servicios: 
-                    <span id="servicio-seleccionado">
-                        <!-- Los servicios aparecerán aquí -->
-                    </span>
+    
+                <p class="sin-fechas" style="display: none;">
+                    No hay fechas disponibles en este momento
                 </p>
-                <p>Fecha: <span id="fecha-seleccionada">9/01</span></p>
-                <p>Horario: <span id="horario-seleccionado">10:00</span></p>
-                <p>Observaciones: <span id="observacion-texto">Ninguna</span></p>
+            </section>
+    
+            <section class="paso paso-3">
+                <h2 class="titulo">Horarios</h2>
+                <p class="subtitulo">¿A qué hora nos vemos?</p>
+                <p class="error-mensaje" id="error-horario">¡Selecciona un horario!</p>
                 
-                <!-- Sección de precios -->
-                <div class="detalle-precios">
-                    <p>Total: <span id="subtotal">$0</span></p>
-                    <p class="monto-reserva">Reserva de turno: <span id="senia">$5.000</span></p>
-                    <p class="saldo">Resto a pagar: <span id="saldo-pendiente">$0</span></p>
+                <div class="cargando-horarios" style="display: none;">
+                    <span class="loader"></span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Paso 6: Confirmación/Error -->
-        <section class="paso paso-6">
-            <div class="exito"></div>
-            <div class="error"></div>
-        </section>
-    </main>
-
-    <!-- Botones de navegación -->
-    <div class="controles">
-        <button class="btn-anterior">
-            <svg class="flecha" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="ffffff"/>
-            </svg>
-        </button>
-        
-        <button class="btn-siguiente">
-            <svg class="flecha" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="ffffff"/>
-            </svg>
-        </button>
-        <span class="loader" id="reserva-loader" style="display: none;"></span>
+                
+                <div class="contenedor-horarios">
+                    <!-- Plantilla para horario (oculta inicialmente) -->
+                    <div class="flotante horario" style="display: none;">
+                        <p class="p1"></p> <!-- Hora -->
+                        <p class="p2"></p> <!-- Estado (Ocupado/Disponible) -->
+    
+                        <svg class="check-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <p class="sin-horarios" style="display: none;">
+                    No hay horarios disponibles para esta fecha
+                </p>
+            </section>
+    
+            <!-- Paso 4: Datos del Cliente -->
+            <section class="paso paso-4">
+                <h2 class="titulo">Tus datos</h2>
+                <p class="subtitulo">Completa para finalizar</p>
+    
+                <p class="error-mensaje" id="error-nombre">¡El nombre debe tener al menos 5 caracteres!</p>
+                <p class="error-mensaje" id="error-email">¡Ingresa un email valido!</p>
+                <p class="error-mensaje" id="error-telefono">¡El teléfono debe tener 10 números!</p>
+                
+                <form id="form-cliente" class="form-datos">
+                    <div class="grupo-form">
+                      <input class="input-floating" type="text" id="nombre" minlength="5" placeholder=" " required>
+                      <label for="nombre">Nombre completo</label>
+                      <small class="small-mensaje">Mínimo 5 letras</small>
+                    </div>
+    
+                    <div class="grupo-form">
+                        <input class="input-floating" type="email" id="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                        <small class="small-mensaje">Ejemplo: usuario@dominio.com</small>
+                    </div>
+    
+                    <!-- Teléfono (exactamente 10 números) -->
+                    <div class="grupo-form">
+                        <input class="input-floating" type="tel" id="telefono" pattern="[0-9]{10}" placeholder=" " oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                        <label for="telefono">Teléfono</label>
+                        <small class="small-mensaje">10 números sin espacios</small>
+                    </div>
+                    
+                    <!-- Observaciones (Opcional) -->
+                    <div class="grupo-form">
+                        <textarea 
+                            class="input-floating" id="observacion" rows="3" placeholder=" "></textarea>
+                        <label for="observacion">Observaciones (opcional)</label>
+                    </div>
+                </form>
+            </section>
+    
+            <!-- Paso 5: Resumen (antes paso 4) -->
+            <section class="paso paso-5">
+                <h2 class="titulo">Resumen</h2>
+                <div class="resumen flotante">
+                    <p>Cliente: <span id="cliente-nombre">[Nombre ingresado]</span></p>
+                    <p id="mail-cliente">Email: <span id="cliente-email">[Email ingresado]</span></p>
+                    <p>Teléfono: <span id="cliente-telefono">[Teléfono ingresado]</span></p>
+                    <p>Servicios: 
+                        <span id="servicio-seleccionado">
+                            <!-- Los servicios aparecerán aquí -->
+                        </span>
+                    </p>
+                    <p>Fecha: <span id="fecha-seleccionada">9/01</span></p>
+                    <p>Horario: <span id="horario-seleccionado">10:00</span></p>
+                    <p>Observaciones: <span id="observacion-texto">Ninguna</span></p>
+                    
+                    <!-- Sección de precios -->
+                    <div class="detalle-precios">
+                        <p>Total: <span id="subtotal">$0</span></p>
+                        <p class="monto-reserva">Reserva de turno: <span id="senia">$5.000</span></p>
+                        <p class="saldo">Resto a pagar: <span id="saldo-pendiente">$0</span></p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Paso 6: Confirmación/Error -->
+            <section class="paso paso-6">
+                <div class="exito"></div>
+                <div class="error"></div>
+            </section>
+        </main>
+    
+        <!-- Botones de navegación -->
+        <div class="controles">
+            <button class="btn-anterior">
+                <svg class="flecha" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="ffffff"/>
+                </svg>
+            </button>
+            
+            <button class="btn-siguiente">
+                <svg class="flecha" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="ffffff"/>
+                </svg>
+            </button>
+            <span class="loader" id="reserva-loader" style="display: none;"></span>
+        </div>
     </div>
 
     <script src="js/bundle.min.js"></script>
