@@ -43,6 +43,10 @@
                 <div class="contenedor-servicios">
                     <div class="flotante servicio" data-servicio="Corte">
                         <p class="p1">Corte</p>
+                        <!-- <p class="detalles-servicio">
+                            <span>$15.000</span>
+                            <span>30 minutos</span>
+                        </p> -->
                         <svg class="check-icon" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                         </svg>
@@ -158,23 +162,49 @@
             <section class="paso paso-5">
                 <h2 class="titulo">Resumen</h2>
                 <div class="resumen flotante">
-                    <p>Cliente: <span id="cliente-nombre">[Nombre ingresado]</span></p>
-                    <p id="mail-cliente">Email: <span id="cliente-email">[Email ingresado]</span></p>
-                    <p>Teléfono: <span id="cliente-telefono">[Teléfono ingresado]</span></p>
-                    <p>Servicios: 
-                        <span id="servicio-seleccionado">
-                            <!-- Los servicios aparecerán aquí -->
-                        </span>
-                    </p>
-                    <p>Fecha: <span id="fecha-seleccionada">9/01</span></p>
-                    <p>Horario: <span id="horario-seleccionado">10:00</span></p>
-                    <p>Observaciones: <span id="observacion-texto">Ninguna</span></p>
+                    <div class="datos-turno">
+                        <div class="titulo-turno">
+                            <h4>Cliente</h4>
+                        </div>
+
+                        <div class="descripcion-turno">
+                            <p><span id="cliente-nombre">[Nombre ingresado]</span></p>
+                            <p id="mail-cliente"><span id="cliente-email">[Email ingresado]</span></p>
+                            <p><span id="cliente-telefono">[Teléfono ingresado]</span></p>
+                        </div>
+                    </div>
+
+                    <div class="datos-turno">
+                        <div class="titulo-turno">
+                            <h4>Turno</h4>
+                        </div>
+
+                        <div class="descripcion-turno">
+                            <p> 
+                                <span id="servicio-seleccionado">
+                                    <!-- Los servicios aparecerán aquí -->
+                                </span>
+                            </p>
+                            <p><span id="fecha-seleccionada">9/01</span></p>
+                            <p><span id="horario-seleccionado">10:00</span></p>
+                            <p><span id="observacion-texto">Sin observaciones</span></p>
+                        </div>
+                    </div>
                     
-                    <!-- Sección de precios -->
-                    <div class="detalle-precios">
-                        <p>Total: <span id="subtotal">$0</span></p>
-                        <p class="monto-reserva">Reserva de turno: <span id="senia">$5.000</span></p>
-                        <p class="saldo">Resto a pagar: <span id="saldo-pendiente">$0</span></p>
+                    <div class="datos-turno">
+                        <div class="titulo-turno">
+                            <h4>Total</h4>
+                            <h4>Reserva</h4>
+                        </div>
+
+                        <div class="descripcion-turno">
+                            <!-- Sección de precios -->
+                            <div class="detalle-precios">
+                                <p><span id="subtotal">$0</span></p>
+                                <p class="monto-reserva"><span id="senia">$1.000</span></p>
+                                <p class="saldo"><span id="saldo-pendiente">$0</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
